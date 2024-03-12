@@ -18,7 +18,6 @@ class RoomServiceLink(db.Model, Model):
         return f"<RoomServiceLink {self.room_id}:{self.service_id}>"
 
     def from_args(args):
-        print(args)
         return RoomServiceLink(Model.get_id(args), args.get("room_id"), args.get("service_id"))
 
     def copy(self, other):
